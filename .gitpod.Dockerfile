@@ -17,7 +17,7 @@ USER gitpod
 #joomla site:create pages --www=/workspace/joomlatools-pages/html  --disable-ssl --mysql-login=root:
 
 
-RUN composer global require joomlatools/console \
-    && export PATH="$PATH:/home/gitpod/.composer/vendor/bin"
+RUN composer global require joomlatools/console 
+    #&& export PATH="$PATH:/home/gitpod/.composer/vendor/bin"
 
 
