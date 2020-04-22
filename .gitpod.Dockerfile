@@ -1,7 +1,7 @@
 FROM gitpod/workspace-mysql
 
-ENV APACHE_DOCROOT="html"
-ENV APACHE_DOCROOT_IN_REPO="html"
+ENV APACHE_DOCROOT="html/pages"
+ENV APACHE_DOCROOT_IN_REPO="html/pages"
 
 USER gitpod
 
@@ -18,6 +18,6 @@ USER gitpod
 
 
 RUN composer global require joomlatools/console \
-    && export PATH="$PATH:~/.composer/vendor/bin" \
+    && export PATH="$PATH:/home/gitpod/.composer/vendor/bin" \
     && joomla site:create pages --www=/workspace/joomlatools-pages/html  --disable-ssl --mysql-login=root:
 
