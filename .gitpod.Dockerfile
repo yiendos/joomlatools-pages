@@ -1,6 +1,7 @@
 FROM gitpod/workspace-mysql
 
 ENV APACHE_DOCROOT="html"
+ENV APACHE_DOCROOT_IN_REPO="html"
 
 USER gitpod
 
