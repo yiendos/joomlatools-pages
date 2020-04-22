@@ -1,5 +1,7 @@
 FROM gitpod/workspace-mysql
 
+ENV APACHE_DOCROOT="html"
+
 USER gitpod
 
 # Install custom tools, runtime, etc. using apt-get
