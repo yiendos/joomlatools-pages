@@ -11,3 +11,13 @@ USER gitpod
 # RUN sudo apt-get -q update && #     sudo apt-get install -yq bastet && #     sudo rm -rf /var/lib/apt/lists/*
 #
 # More information: https://www.gitpod.io/docs/config-docker/
+
+#composer global require joomlatools/console
+#export PATH="$PATH:~/.composer/vendor/bin"
+#joomla site:create pages --www=/workspace/joomlatools-pages/html  --disable-ssl --mysql-login=root:
+
+
+RUN composer global require joomlatools/console \
+    && export PATH="$PATH:~/.composer/vendor/bin" \
+    && joomla site:create pages --www=/workspace/joomlatools-pages/html  --disable-ssl --mysql-login=root:
+
